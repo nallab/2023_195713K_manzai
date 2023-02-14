@@ -1,0 +1,9 @@
+BootStrap: localimage
+From: pytorch_latest.sif
+# singularity pull docker://pytorch/pytorch:latest
+
+%post
+    apt-get update
+    apt install -y --no-install-recommends graphviz
+    pip install --upgrade pip
+    pip install sentencepiece scikit-learn transformers matplotlib pydot datasets accelerate torch protobuf evaluate%   
